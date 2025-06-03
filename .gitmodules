@@ -1,0 +1,3 @@
+[submodule "submodules/octree_feature_extractor"]
+	path = submodules/octree_feature_extractor
+	url = git@github.com:TRI-ML/octree_feature_extractor.git

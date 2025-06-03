@@ -32,6 +32,7 @@ Robotic grasping is a cornerstone capability of embodied systems. Many methods d
 
 ```
 $ git clone --recursive git@github.com:TRI-ML/ZeroGrasp.git
+$ git submodule update --init --recursive
 $ cd ZeroGrasp
 $ ./docker/build.sh
 ```
@@ -39,13 +40,12 @@ $ ./docker/build.sh
 ### Run a docker image
 
 ```
-$ ./docker/run.sh
+$ ./docker/run.sh ${GPU_IDS}
 ```
 
 ## Dataset Preparation
 
-
-Please reach out to `siwase@andrew.cmu.edu` to get access to the dataset. I will share the Google drive link to the dataset. Since [Webdataset](https://github.com/webdataset/webdataset) is used for training and evaluation, it is recommended re-upload the shard files to your own S3 bucket for training. **Do not forget to replace `{your_s3_path}` in `configs/default.yaml` with your S3 path.** You can also download a tiny version of the training dataset (the first 10 shards of the training dataset) in `train_tiny` directory for visualization purposes.
+Please reach out to `siwase@cs.cmu.edu` to get access to the ZeroGrasp-11B dataset. I will share its Google drive link within a few days. Since [Webdataset](https://github.com/webdataset/webdataset) is used for training and evaluation, you have to re-upload the shard files to your own S3 bucket for training. **Do not forget to replace `{your_s3_path}` in `configs/default.yaml` with your S3 path.** You can also download a tiny version of the training dataset (the first 10 shards of the training dataset) in `train_tiny` directory for visualization purposes.
 
 ## Quickstart
 
@@ -59,14 +59,11 @@ $ ./scripts/train.sh {your_wandb_project_name} {your_wandb_run_name} ./configs/d
 $ ./scripts/train.sh {your_wandb_project_name} {your_wandb_run_name} ./configs/default.yaml {path_to_checkpoint_file}
 ```
 
-### Evaluation
-COMING SOON!
-
-### Visualizations
-COMING SOON!
-
 ### Demo
-COMING SOON!
+Please download the pretrained checkpoint from [here](https://drive.google.com/file/d/1xUmFdgT_Ozu4zIPIsh_1SJMcegeQUWqQ/view?usp=sharing). Note that this checkpoint is only trained with the synthetic data. The depth maps from stereo matching algorithms (e.g., [FoundationStereo](https://github.com/NVlabs/FoundationStereo/), [DEFOM-Stereo](https://github.com/Insta360-Research-Team/DEFOM-Stereo)) are preferable to see the best performance.
+```
+$ python3 demo.py --img_path demo/000.rgb.png --depth_path demo/000.depth.png --mask_path demo/000.mask.png --camera_info_path demo/000.camera.json --checkpoint checkpoints/mirage_cvpr2025/mirage/epoch=1-step=80000.ckpt --config configs/demo.yaml
+```
 
 ## Citation
 ```
@@ -79,4 +76,4 @@ COMING SOON!
 ```
 
 ## License
-This repository is released under the [CC BY-NC 4.0](https://github.com/TRI-ML/OctMAE/blob/main/LICENSE.md) license.
+This repository is released under the [CC BY-NC 4.0](https://github.com/TRI-ML/ZeroGrasp/blob/main/LICENSE.md) license.

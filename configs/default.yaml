@@ -1,0 +1,37 @@
+project_name: zerograsp
+model_name: zerograsp
+
+# Training parameters
+optimizer: AdamW
+lr: 0.0001
+weight_decay: 0.05
+scheduler_step: 5000
+scheduler_decay: 0.9
+max_epochs: 5
+log_every_n_steps: 100
+num_workers: 16
+batch_size: 8
+backbone_model: resnext
+
+num_enc_layers: 3
+num_dec_layers: 3
+grid_size: 80.0
+update_octree: false
+max_lod: 9
+min_lod: 4
+num_heads: 3
+dim_model: 32
+dim_mae: 192
+input_feature_type: FLM
+use_mult_obj_enc: true
+predict_grasp: true
+use_cvae: true
+use_per_obj_latent: true
+concat_obj_latent: true
+use_pool_and_concat: true
+kl_weight: 0.5
+latent_dim: 16
+ofe_use_conv3d: true
+use_gt_depth: true
+use_collision_constraints: true
+use_collision_detection: true

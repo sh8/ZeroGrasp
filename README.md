@@ -14,7 +14,7 @@
 [Kris Kitani](https://kriskitani.github.io/),
 [Rareș Ambruș](https://www.tri.global/about-us/dr-rares-ambrus),
 [Sergey Zakharov](https://zakharos.github.io/)<br>
-**[Paper](https://arxiv.org/abs/2403.14628), [Project Page](https://sh8.io/#/oct_mae)**
+**[Paper](https://arxiv.org/abs/2504.10857v1), [Project Page](https://sh8.io/#/zerograsp)**
 
 ## Abstract
 

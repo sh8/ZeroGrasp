@@ -21,7 +21,19 @@
 Robotic grasping is a cornerstone capability of embodied systems. Many methods directly output grasps from partial information without modeling the geometry of the scene, leading to suboptimal motion and even collisions. To address these issues, we introduce ZeroGrasp, a novel framework that simultaneously performs 3D reconstruction and grasp pose prediction in near real-time. A key insight of our method is that occlusion reasoning and modeling the spatial relationships between objects is beneficial for both accurate reconstruction and grasping. We couple our method with a novel large-scale synthetic dataset, which is an order of magnitude larger than existing datasets and comprises 1M photo-realistic images, high-resolution 3D reconstructions and 11.3B physically-valid grasp pose annotations for 12K objects from the Objaverse-LVIS dataset. We evaluate ZeroGrasp on the GraspNet-1B benchmark as well as through real-world robot experiments. ZeroGrasp achieves state-of-the-art performance and generalizes to novel real-world objects by leveraging synthetic data.
 
 ## News
+- 2025-06-07: Code, checkpoint and datasets are released!
 - 2025-02-26: ZeroGrasp is accepted by CVPR 2025
+
+## TO-DOs
+- [x] Inference code
+- [x] Release ReOcS dataset
+- [x] Release ZeroGrasp-11B dataset
+- [x] Checkpoint trained on ZeroGrasp-11B
+- [x] Demo code
+- [x] Training code
+- [ ] Integrate EconomicGrasp
+- [ ] CUDA version of collision detection
+- [ ] Integrate stereo or monocular depth estimation into the demo script
 
 ## Prerequisites
 - Docker
@@ -45,7 +57,7 @@ $ ./docker/run.sh ${GPU_IDS}
 
 ## Dataset Preparation
 
-Please reach out to `siwase@cs.cmu.edu` to get access to the ZeroGrasp-11B dataset. I will share its Google drive link within a few days. Since [Webdataset](https://github.com/webdataset/webdataset) is used for training and evaluation, you have to re-upload the shard files to your own S3 bucket for training. **Do not forget to replace `{your_s3_path}` in `configs/default.yaml` with your S3 path.** You can also download a tiny version of the training dataset (the first 10 shards of the training dataset) in `train_tiny` directory for visualization purposes.
+Please reach out to `siwase@cs.cmu.edu` to get access to the ZeroGrasp-11B and ReOcs datasets. I will share its Google drive link within a few days. Since [Webdataset](https://github.com/webdataset/webdataset) is used for training and evaluation, you have to re-upload the shard files to your own S3 bucket for training. **Do not forget to replace `{your_s3_path}` in `configs/default.yaml` with your S3 path.** You can also download a tiny version of the training dataset (the first 10 shards of the training dataset) in `train_tiny` directory for visualization purposes.
 
 ## Quickstart
 
@@ -76,4 +88,4 @@ $ python3 demo.py --img_path demo/000.rgb.png --depth_path demo/000.depth.png --
 ```
 
 ## License
-This repository is released under the [CC BY-NC 4.0](https://github.com/TRI-ML/ZeroGrasp/blob/main/LICENSE.md) license.
+This repository is released under the [CC BY-NC 4.0](https://github.com/TRI-ML/sh8/blob/main/LICENSE.md) license.

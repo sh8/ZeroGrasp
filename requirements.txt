@@ -1,0 +1,22 @@
+cmake
+dwconv @ git+https://github.com/octree-nn/dwconv.git@ae53057eaf36dab01aa2727fcc93a749fd995af5#egg=dwconv
+joblib==1.2.0
+lightning==2.2.3
+ninja
+ocnn @ git+https://github.com/octree-nn/ocnn-pytorch.git
+open3d==0.18.0
+opencv-python-headless==4.7.0.72
+pillow==10.2.0
+rotary-embedding-torch==0.3.5
+PyMCubes==0.1.4
+scikit-image==0.21.0
+scikit-learn==1.2.2
+scipy==1.10.1
+segmentation-models-pytorch
+siren-pytorch
+six==1.15.0
+torchmetrics
+tqdm==4.65.0
+trimesh==3.22.0
+wandb
+webdataset @ git+https://github.com/webdataset/webdataset.git@f11fd66c163722c607ec99475a6f3cb880ec35b8

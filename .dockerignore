@@ -1,0 +1,10 @@
+docker/Dockerfile
+checkpoints/
+train_data/
+eval_data/
+cache/
+build/
+data/
+eval_results/
+wandb/
+.git/

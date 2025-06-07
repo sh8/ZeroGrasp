@@ -65,14 +65,17 @@ Please reach out to `siwase@cs.cmu.edu` to get access to the ZeroGrasp-11B and R
 
 ```
 # From scratch
-$ ./scripts/train.sh {your_wandb_project_name} {your_wandb_run_name} ./configs/default.yaml
+$ ./train.sh {your_wandb_project_name} {your_wandb_run_name} ./configs/default.yaml
 
 # From a checkpoint
-$ ./scripts/train.sh {your_wandb_project_name} {your_wandb_run_name} ./configs/default.yaml {path_to_checkpoint_file}
+$ ./train.sh {your_wandb_project_name} {your_wandb_run_name} ./configs/default.yaml {path_to_checkpoint_file}
 ```
 
+### Evaluation
+Coming soon!
+
 ### Demo
-Please download the pretrained checkpoint from [here](https://drive.google.com/file/d/1xUmFdgT_Ozu4zIPIsh_1SJMcegeQUWqQ/view?usp=sharing). Note that this checkpoint is only trained with the synthetic data. The depth maps from stereo matching algorithms (e.g., [FoundationStereo](https://github.com/NVlabs/FoundationStereo/), [DEFOM-Stereo](https://github.com/Insta360-Research-Team/DEFOM-Stereo)) are preferable to see the best performance.
+Please download the pretrained checkpoint from [here](https://drive.google.com/file/d/1xUmFdgT_Ozu4zIPIsh_1SJMcegeQUWqQ/view?usp=sharing). Note that this checkpoint is only trained with the synthetic data. The depth maps from stereo matching algorithms (e.g., [FoundationStereo](https://github.com/NVlabs/FoundationStereo/), [DEFOM-Stereo](https://github.com/Insta360-Research-Team/DEFOM-Stereo), and etc.) are preferable to see the best performance.
 ```
 $ python3 demo.py --img_path demo/000.rgb.png --depth_path demo/000.depth.png --mask_path demo/000.mask.png --camera_info_path demo/000.camera.json --checkpoint checkpoints/mirage_cvpr2025/mirage/epoch=1-step=80000.ckpt --config configs/demo.yaml
 ```

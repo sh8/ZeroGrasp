@@ -8,7 +8,7 @@
 [Katherine Liu](https://www.thekatherineliu.com/),
 [Vitor Guizilini](https://vitorguizilini.weebly.com/),
 [Robert Lee](https://www.linkedin.com/in/robert-lee-a8a98922b),
-[Amma Ayako](),
+[Ayako Amma](),
 [Takuya Ikeda](https://www.linkedin.com/in/takuya-ikeda-a66132190/),
 [Koichi Nishiwaki](https://www.linkedin.com/in/knishiwaki/),
 [Kris Kitani](https://kriskitani.github.io/),
@@ -67,7 +67,7 @@ $ python3 demo.py --img_path demo/000.rgb.png --depth_path demo/000.depth.png --
 
 ## Citation
 ```
-@InProceedings{Iwase_CVPR_2024,
+@InProceedings{Iwase_CVPR_2025,
   title     = {{ZeroGrasp: Zero-Shot Shape Reconstruction Enabled Robotic Grasping}},
   author    = {Iwase, Shun and Irshad, Muhammad Zubair and Liu, Katherine and Guizilini, Vitor and Lee, Robert and Ikeda, Takuya and Ayako, Amma and Nishiwaki, Koichi and Kitani, Kris and Ambru{\c{s}}, Rare{\c{s}} and Zakharov, Sergey},
   booktitle = {CVPR},

@@ -57,7 +57,7 @@ $ ./docker/run.sh ${GPU_IDS}
 
 ## Dataset Preparation
 
-Please reach out to `siwase@cs.cmu.edu` to get access to the ZeroGrasp-11B and ReOcs datasets. I will share its Google drive link within a few days. Since [Webdataset](https://github.com/webdataset/webdataset) is used for training and evaluation, you have to re-upload the shard files to your own S3 bucket for training. **Do not forget to replace `{your_s3_path}` in `configs/default.yaml` with your S3 path.** You can also download a tiny version of the training dataset (the first 10 shards of the training dataset) in `train_tiny` directory for visualization purposes.
+Please reach out to `siwase@cs.cmu.edu` to get access to the ZeroGrasp-11B and ReOcs datasets. I will share its Google drive link within a few days. Since [Webdataset](https://github.com/webdataset/webdataset) is used for training and evaluation, you have to re-upload the shard files to your own S3 bucket for training. **Do not forget to replace `{your_s3_path}` in `configs/default.yaml` with your S3 path.** Note that the ZeroGrasp-11B needs 2TB of storage. You can also download a tiny version of the training dataset (the first 10 shards of the training dataset) in `train_tiny` directory for visualization purposes.
 
 ## Quickstart
 
